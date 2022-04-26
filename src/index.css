@@ -1,13 +1,228 @@
-body {
+body 
+{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Helvetica';
+    src: url('assets/font/Helvetica.ttf');
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
+  width: 210mm;
+  height: 297mm;
+  padding: 5%;
+  background-color: #dadada;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+code 
+{
+  /* font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace; */
 }
+
+main
+{
+  font-size: small;
+  background-color: white;
+
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+h1
+{
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+h2
+{
+  text-transform: uppercase;
+  font-weight: normal;
+  margin-bottom: 5px;
+}
+
+p
+{
+  margin: 0px;
+}
+
+ul
+{
+  list-style: none;
+}
+
+header
+{
+  border: 10px;
+  border: solid;
+  border-color: black;
+}
+
+  header .title
+  {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: bold;
+    letter-spacing: 2px;
+  }
+
+header ul
+{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: 0px;
+  padding-right: 10%;
+  padding-left: 10%;
+}
+
+footer
+{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+  list-style: none;
+}
+
+  footer ul
+  {
+    font-size: smaller;
+    padding: 7.5%;
+  }
+
+  footer li
+  {
+    display: inline-block;
+  }
+
+  footer span
+  {
+    font-weight: bold;
+  }
+
+section
+{
+  display: flex;
+  align-items: center;
+  justify-items: end;
+  flex-direction: column;
+}
+
+article
+{
+  display: flex;
+  align-items: center;
+  justify-items: end;
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex-basis: 100%;
+}
+
+  .previewDiv
+  {
+    display: flex;
+    justify-items: center;
+    flex-direction: column;
+    padding: 10px;
+  }
+
+    #text
+    {
+      padding: 10px;
+      border-width: 0px;
+    }
+
+    .previewButton
+    {
+      font-size: large;
+      font-weight: bold;
+      border-width: 0px;
+      border-radius: 10px;
+      padding: 10px;
+      background: rgb(104, 129, 255);
+    }
+
+  .mainBody
+  {
+    display: table;
+    margin: auto;
+  }
+
+  .secondaryBody
+  {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  .gap
+  {
+    padding: 20px;
+  }
+
+  .row
+  {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+
+    padding: 0px;
+    margin: 0px;
+  }
+
+  .column
+  {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+  }
+
+  .yourDetails
+  {
+    align-items: flex-end;
+    /* width: 42mm; */
+    width: 63mm;
+    padding-left: 30%;
+  }
+
+    #yourAddress
+    {
+      padding-bottom: 20px;
+    }
+
+    .listHeader
+    {
+      font-weight: bold;
+      padding-top: 10px;
+    }
+
+  .clientDetails
+  {
+    align-items: flex-start;
+    padding-left: 5%;
+  }
+
+    .listImage
+    {
+      padding-bottom: 20px;
+    }
+
+  .bankTransferFooter
+  {
+    margin: 0px;
+    padding-bottom: 0px;
+    width: 100%;
+  }
+
+  .interestRateFooter
+  {
+    margin: 0px;
+    padding-top: 10px;
+    width: 100%;
+  }
