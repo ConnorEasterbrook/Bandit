@@ -67,6 +67,27 @@ header
     letter-spacing: 2px;
   }
 
+  header button
+  {
+
+    margin: 0px;
+  }
+
+    header .print
+    {
+      background-color: #476A6F;
+    }
+
+    header .download
+    {
+      background-color: #519E8A;
+    }
+
+    header .send
+    {
+      background-color: #7EB09B;
+    }
+
 header ul
 {
   display: flex;
@@ -74,10 +95,30 @@ header ul
   align-items: center;
   justify-content: space-between;
 
-  margin-top: 0px;
-  padding-right: 10%;
-  padding-left: 10%;
+  padding-right:15%;
+  padding-left: 15%;
 }
+
+button
+{
+  font-size: large;
+  font-weight: bold;
+  border-width: 0px;
+  border-radius: 10px;
+  padding: 10px;
+  color: white;
+  background: rgb(104, 129, 255);
+  border-width: 1px;
+
+  user-select: none;
+  transition: all 0.5s;
+}
+
+  button:hover
+  {
+    color: black;
+    background-color: #00000000;
+  }
 
 footer
 {
@@ -151,17 +192,6 @@ article
       margin-bottom: 10px;
     }
 
-    .previewButton
-    {
-      font-size: large;
-      font-weight: bold;
-      border-width: 0px;
-      border-radius: 10px;
-      padding: 10px;
-      color: white;
-      background: rgb(104, 129, 255);
-    }
-
   .mainBody
   {
     display: table;
@@ -231,9 +261,18 @@ article
   .notes
   {
     align-items: flex-start;
-    padding-left: 10%;
-    padding-right: 10%;
+    font-size: medium;
+    width: 60%;
+    margin-top: 5%;
+    padding-left: 7.5%;
   }
+
+    .notes h2
+    {
+      font-size: medium;
+      font-weight: bold;
+      text-transform: none;    
+    }
 
   .bankTransferFooter
   {
@@ -253,7 +292,7 @@ article
   {
     font-size: normal;
     font-weight: bold;
-    border-width: 0px;
+    border-width: 1px;
     border-radius: 10px;
     margin: 2%;
     padding: 10px;

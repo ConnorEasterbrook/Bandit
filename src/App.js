@@ -80,7 +80,6 @@ function App()
               type="text"
               id="smallText"
               placeholder="Enter your name."
-              autoComplete="off"
               value={name}
               onChange={(e) => setName(e.target.value)}
             />
@@ -92,7 +91,6 @@ function App()
               cols="1"
               rows="5"
               placeholder="Enter your address."
-              autoComplete="off"
               value={address}
               onChange={(e) => setAddress(e.target.value)}
             />
@@ -102,7 +100,6 @@ function App()
               type="date"
               id="dateText"
               placeholder="Enter the invoice send date."
-              autoComplete="off"
               value={invoiceDate}
               onChange={(e) => setInvoiceDate(e.target.value)}
             />
@@ -112,7 +109,6 @@ function App()
               type="text"
               id="smallText"
               placeholder="Enter your invoice number."
-              autoComplete="off"
               value={invoiceNumber}
               onChange={(e) => setInvoiceNumber(e.target.value)}
             />
@@ -122,7 +118,6 @@ function App()
               type="text"
               id="smallText"
               placeholder="Enter your invoice reference."
-              autoComplete="off"
               value={invoiceReference}
               onChange={(e) => setInvoiceReference(e.target.value)}
             />
@@ -132,7 +127,6 @@ function App()
               type="date"
               id="dateText"
               placeholder="Enter your invoice due date."
-              autoComplete="off"
               value={dueDate}
               onChange={(e) => setDueDate(e.target.value)}
             />
@@ -144,7 +138,6 @@ function App()
               type="text"
               id="smallText"
               placeholder="Enter your client's name."
-              autoComplete="off"
               value={clientName}
               onChange={(e) => setClientName(e.target.value)}
             />
@@ -156,7 +149,6 @@ function App()
               cols="1"
               rows="5"
               placeholder="Enter your client's address."
-              autoComplete="off"
               value={clientAddress}
               onChange={(e) => setClientAddress(e.target.value)}>
             </textarea>
@@ -170,7 +162,6 @@ function App()
               cols="1"
               rows="5"
               placeholder="Enter any additional notes."
-              autoComplete="off"
               value={notes}
               onChange={(e) => setNotes(e.target.value)}>
             </textarea>
@@ -182,7 +173,6 @@ function App()
               type="text"
               id="smallText"
               placeholder="Enter your full name."
-              autoComplete="off"
               value={accountName}
               onChange={(e) => setAccountName(e.target.value)}
             />
@@ -192,7 +182,6 @@ function App()
               type="text"
               id="smallText"
               placeholder="Enter your account number."
-              autoComplete="off"
               value={accountNumber}
               onChange={(e) => setAccountNumber(e.target.value)}
             />
@@ -202,7 +191,6 @@ function App()
               type="text"
               id="smallText"
               placeholder="Enter your sort code."
-              autoComplete="off"
               value={sortCode}
               onChange={(e) => setSortCode(e.target.value)}
             />
@@ -212,7 +200,6 @@ function App()
               type="text"
               id="smallText"
               placeholder="Enter your Paypal email"
-              autoComplete="off"
               value={paypalEmail}
               onChange={(e) => setPaypalEmail(e.target.value)}
             />
