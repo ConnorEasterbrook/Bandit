@@ -131,10 +131,24 @@ article
     padding: 10px;
   }
 
-    #text
+    #smallText
     {
       padding: 10px;
       border-width: 0px;
+      margin-bottom: 10px;
+    }
+
+    #bigText
+    {
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+
+    #dateText
+    {
+      width: 25%;
+      padding: 10px;
+      margin-bottom: 10px;
     }
 
     .previewButton
@@ -144,6 +158,7 @@ article
       border-width: 0px;
       border-radius: 10px;
       padding: 10px;
+      color: white;
       background: rgb(104, 129, 255);
     }
 
@@ -213,6 +228,13 @@ article
       padding-bottom: 20px;
     }
 
+  .notes
+  {
+    align-items: flex-start;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
   .bankTransferFooter
   {
     margin: 0px;
@@ -225,4 +247,16 @@ article
     margin: 0px;
     padding-top: 10px;
     width: 100%;
+  }
+
+  .editInfo
+  {
+    font-size: normal;
+    font-weight: bold;
+    border-width: 0px;
+    border-radius: 10px;
+    margin: 2%;
+    padding: 10px;
+    color: white;
+    background: rgb(104, 129, 255);
   }

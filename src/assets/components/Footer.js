@@ -1,17 +1,17 @@
-export default function Footer()
+export default function Footer({accountName, accountNumber, sortCode, paypalEmail})
 {
     return (
         <footer>
             <ul class="bankTransferFooter">
                 <li><span>Payment by bank transfer: </span></li><br></br>
                 <li><span>Account Name: </span></li>
-                <li>Your name. </li>
+                <li>{accountName}</li>
                 <li><span>Account number: </span></li>
-                <li>12345678 </li>
+                <li>{accountNumber}</li>
                 <li><span>Sort code: </span></li>
-                <li>654321 </li>
+                <li>{sortCode}</li>
                 <li><span>Payment by Paypal: </span></li>
-                <li>Your Paypal email. </li>
+                <li>{paypalEmail}</li>
                 {/* <li>Your mobile number. </li>
           <li>Bank. </li>
           <li>Account holder. </li>

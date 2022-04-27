@@ -1,8 +1,8 @@
-export default function Notes()
+export default function Notes({notes})
 {
     return (
         <section class="notes">
-            <p>Extra invoice information</p>
+            <p>{notes}</p>
         </section>
     )
 }

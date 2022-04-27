@@ -1,4 +1,4 @@
-export default function ClientDetails()
+export default function ClientDetails({clientName, clientAddress})
 {
     return (
         <div class="clientDetails">
@@ -7,8 +7,8 @@ export default function ClientDetails()
                     <img src="assets/images/logo.png" alt="Company Logo">
                     </img>
                 </li>
-                <li id="yourName" class="listHeader">Client's Name</li>
-                <li id="yourAddress" class="listText">Client's address</li>
+                <li id="yourName" class="listHeader">{clientName}</li>
+                <li id="yourAddress" class="listText">{clientAddress}</li>
             </ul>
         </div>
     )
