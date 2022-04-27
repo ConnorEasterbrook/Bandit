@@ -62,15 +62,10 @@ header
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 5px;
 
     font-weight: bold;
     letter-spacing: 2px;
-  }
-
-  header button
-  {
-
-    margin: 0px;
   }
 
     header .print
@@ -78,14 +73,29 @@ header
       background-color: #476A6F;
     }
 
+      header .print:hover
+      {
+        border-color: #476A6F;
+      }
+
     header .download
     {
       background-color: #519E8A;
     }
 
+    header .download:hover
+    {
+      border-color: #519E8A;
+    }
+
     header .send
     {
       background-color: #7EB09B;
+    }
+
+    header .send:hover
+    {
+      border-color: #7EB09B;
     }
 
 header ul
@@ -106,9 +116,10 @@ button
   border-width: 0px;
   border-radius: 10px;
   padding: 10px;
+  border-width: 5px;
+  border-color: transparent;
   color: white;
   background: rgb(104, 129, 255);
-  border-width: 1px;
 
   user-select: none;
   transition: all 0.5s;
@@ -118,7 +129,19 @@ button
   {
     color: black;
     background-color: #00000000;
+    border-color: rgb(104, 129, 255);
   }
+
+label
+{
+  margin-bottom: 5px;
+}
+
+input, textarea
+{
+  font-weight: bold;
+  background-color: #f1f1f1;
+}
 
 footer
 {
@@ -167,30 +190,54 @@ article
   .previewDiv
   {
     display: flex;
-    justify-items: center;
-    flex-direction: column;
+    /* flex-flow: column wrap; */
+    flex-wrap: wrap;
+    flex-direction: row;
     padding: 10px;
   }
 
-    #smallText
+    .inputFieldSingle
     {
-      padding: 10px;
-      border-width: 0px;
-      margin-bottom: 10px;
+      display: flex;
+      flex-flow: column wrap;
+      width: 100%;
     }
 
-    #bigText
+    .inputField
     {
-      padding: 10px;
-      margin-bottom: 10px;
+      display: flex;
+      flex-flow: column wrap;
+      flex: 1 1 50%;
     }
 
-    #dateText
-    {
-      width: 25%;
-      padding: 10px;
-      margin-bottom: 10px;
-    }
+      .singleRow
+      {
+        width: 100%;
+      }
+
+      #smallText
+      {
+        padding: 10px;
+        border-width: 0px;
+        margin-bottom: 10px;
+        width: 60%;
+      }
+
+      #bigText
+      {
+        padding: 10px;
+        margin-bottom: 10px;
+        border-width: 0px;
+        width: 80%;
+      }
+
+      #dateText
+      {
+        padding: 10px;
+        margin-bottom: 10px;
+        border-width: 0px;
+        width: 40%;
+      }
 
   .mainBody
   {
@@ -207,6 +254,7 @@ article
   .gap
   {
     padding: 20px;
+    width: 100%;
   }
 
   .row
@@ -234,6 +282,7 @@ article
     /* width: 42mm; */
     width: 63mm;
     padding-left: 30%;
+    white-space: pre-line;
   }
 
     #yourAddress
@@ -251,6 +300,7 @@ article
   {
     align-items: flex-start;
     padding-left: 5%;
+    white-space: pre-line;
   }
 
     .listImage
@@ -288,14 +338,20 @@ article
     width: 100%;
   }
 
-  .editInfo
+  .bottomSection
   {
-    font-size: normal;
-    font-weight: bold;
-    border-width: 1px;
-    border-radius: 10px;
-    margin: 2%;
-    padding: 10px;
-    color: white;
-    background: rgb(104, 129, 255);
+    border: 2px;
+    border: solid;
+    border-color: black;
   }
+
+    .editInfo
+    {
+      font-size: normal;
+      font-weight: bold;
+      border-radius: 10px;
+      margin: 2%;
+      padding: 10px;
+      color: white;
+      background: rgb(104, 129, 255);
+    }
