@@ -1,14 +1,14 @@
 export default function ClientDetails({clientName, clientAddress})
 {
     return (
-        <div class="clientDetails">
+        <div className="clientDetails">
             <ul>
                 <li id="listImage">
-                    <img src="assets/images/logo.png" alt="Company Logo">
+                    <img src={`${process.env.PUBLIC_URL}/assets/images/logo.png`} alt="Company Logo" className="compImage">
                     </img>
                 </li>
-                <li id="yourName" class="listHeader">{clientName}</li>
-                <li id="yourAddress" class="listText">{clientAddress}</li>
+                <li id="yourName" className="listHeader">{clientName}</li>
+                <li id="yourAddress" className="listText">{clientAddress}</li>
             </ul>
         </div>
     )

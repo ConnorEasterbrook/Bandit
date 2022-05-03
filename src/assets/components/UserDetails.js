@@ -1,18 +1,18 @@
 export default function UserDetails({name, address, invoiceDate, invoiceNumber, invoiceReference, dueDate})
 {
     return (
-        <div class="yourDetails">
+        <div className="yourDetails">
             <ul>
-                <li id="yourName" class="listHeader">{name}</li>
-                <li id="yourAddress" class="listText">{address}</li>
-                <li class="listHeader">Invoice date:</li>
-                <li class="listText">{invoiceDate}</li>
-                <li class="listHeader">Invoice number:</li>
-                <li class="listText">INV-{invoiceNumber}</li>
-                <li class="listHeader">Invoice reference:</li>
-                <li class="listText">{invoiceReference}</li>
-                <li class="listHeader">Due date:</li>
-                <li class="listText">{dueDate}</li>
+                <li id="yourName" className="listHeader">{name}</li>
+                <li id="yourAddress" className="listText">{address}</li>
+                <li className="listHeader">Invoice date:</li>
+                <li className="listText">{invoiceDate}</li>
+                <li className="listHeader">Invoice number:</li>
+                <li className="listText">INV-{invoiceNumber}</li>
+                <li className="listHeader">Invoice reference:</li>
+                <li className="listText">{invoiceReference}</li>
+                <li className="listHeader">Due date:</li>
+                <li className="listText">{dueDate}</li>
             </ul>
         </div>
     )

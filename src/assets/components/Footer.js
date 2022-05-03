@@ -2,7 +2,7 @@ export default function Footer({accountName, accountNumber, sortCode, paypalEmai
 {
     return (
         <footer>
-            <ul class="bankTransferFooter">
+            <ul className="bankTransferFooter">
                 <li><span>Payment by bank transfer: </span></li><br></br>
                 <li><span>Account Name: </span></li>
                 <li>{accountName}</li>
@@ -17,7 +17,7 @@ export default function Footer({accountName, accountNumber, sortCode, paypalEmai
           <li>Account holder. </li>
           <li>Website.</li> */}
             </ul>
-            <ul class="interestRateFooter">
+            <ul className="interestRateFooter">
                 <li>Settlement of this invoice is required within 15 days from the invoice date. We reserve the
                     right to charge interest on invoices that remain unpaid 30 days after the invoice date. Our
                     standard interest rate is 10.75% (10% plus the Bank of England base rate). The Late

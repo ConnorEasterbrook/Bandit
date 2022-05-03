@@ -1,8 +1,10 @@
-export default function TableForm({ quantity, setQuantity, desc, setDesc, price, setPrice, total })
+export default function TableForm({ quantity, setQuantity, desc, setDesc, price, setPrice, total, setTotal })
 {
+    const calculateTotal = (total) => { setTotal (quantity * price) }
+
     return (
-        <div class="tableForm">
-            <div class="inputFieldTableSmall">
+        <div className="tableForm">
+            <div className="inputFieldTableSmall">
                 <label htmlFor="quantity">
                     Item quantity
                 </label>
@@ -15,7 +17,7 @@ export default function TableForm({ quantity, setQuantity, desc, setDesc, price,
                 />
             </div>
             
-            <div class="inputFieldTableBig">
+            <div className="inputFieldTableBig">
                 <label htmlFor="desc">
                     Item description
                 </label>
@@ -28,7 +30,7 @@ export default function TableForm({ quantity, setQuantity, desc, setDesc, price,
                 />
             </div>
             
-            <div class="inputFieldTableSmall">
+            <div className="inputFieldTableSmall">
                 <label htmlFor="price">
                     Item price
                 </label>

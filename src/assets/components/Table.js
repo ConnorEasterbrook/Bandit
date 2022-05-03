@@ -1,19 +1,19 @@
-export default function Table({ quantity, desc, price, total, setTotal })
+export default function Table({ quantity, desc, price, total })
 {
     return (
         <table>
             <thead>
                 <tr>
-                    <td>
+                    <td className="smallTableCol">
                         Quantity
                     </td>
                     <td>
                         Item Description
                     </td>
-                    <td>
+                    <td className="smallTableCol">
                         Price
                     </td>
-                    <td>
+                    <td className="smallTableCol">
                         Total
                     </td>
                 </tr>

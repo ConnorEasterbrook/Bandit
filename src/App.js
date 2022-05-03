@@ -43,13 +43,13 @@ function App()
     <main>
       {showInvoice ?
         (
-          <div class="mainBody">
-            <div class="secondaryBody">
+          <div className="mainBody">
+            <div className="secondaryBody">
               <Header />
 
-              <div class="row">
+              <div className="row">
                 {/* Client details */}
-                <div class="column">
+                <div className="column">
                   <ClientDetails
                     clientName={clientName}
                     clientAddress={clientAddress}
@@ -57,7 +57,7 @@ function App()
                 </div>
 
                 {/* Your details */}
-                <div class="column">
+                <div className="column">
                   <UserDetails
                     name={name}
                     address={address}
@@ -75,7 +75,6 @@ function App()
                 desc={desc}
                 price={price}
                 total={total}
-                setTotal={setTotal}
               />
 
 
@@ -89,16 +88,16 @@ function App()
                 paypalEmail={paypalEmail}
               />
 
-              <div class="bottomSection">
-                <button class="editInfo" onClick={() => setShowInvoice(false)}>Edit information</button>
+              <div className="bottomSection">
+                <button className="editInfo" onClick={() => setShowInvoice(false)}>Edit information</button>
               </div>
 
             </div>
           </div>
         ) : (
-          <div class="previewDiv">
-            <div class="inputField">
-              <label class="singleRow" htmlFor="yourName">Your name:</label>
+          <div className="previewDiv">
+            <div className="inputField">
+              <label className="singleRow" htmlFor="yourName">Your name:</label>
               <input
                 type="text"
                 id="smallText"
@@ -108,7 +107,7 @@ function App()
               />
             </div>
 
-            <div class="inputFieldSingle">
+            <div className="inputFieldSingle">
               <label htmlFor="address">Your address:</label>
               <textarea
                 type="text"
@@ -119,7 +118,7 @@ function App()
               />
             </div>
 
-            <div class="inputField">
+            <div className="inputField">
               <label htmlFor="invoiceDate">Invoice send date:</label>
               <input
                 type="date"
@@ -130,7 +129,7 @@ function App()
               />
             </div>
 
-            <div class="inputField">
+            <div className="inputField">
               <label htmlFor="dueDate">Invoice due date:</label>
               <input
                 type="date"
@@ -141,7 +140,7 @@ function App()
               />
             </div>
 
-            <div class="inputField">
+            <div className="inputField">
               <label htmlFor="invoiceNumber">Invoice number:</label>
               <input
                 type="text"
@@ -152,7 +151,7 @@ function App()
               />
             </div>
 
-            <div class="inputField">
+            <div className="inputField">
               <label htmlFor="invoiceReference">Invoice reference:</label>
               <input
                 type="text"
@@ -163,9 +162,9 @@ function App()
               />
             </div>
 
-            <div class="gap"></div>
+            <div className="gap"></div>
 
-            <div class="inputField">
+            <div className="inputField">
               <label htmlFor="clientName">Client name:</label>
               <input
                 type="text"
@@ -176,7 +175,7 @@ function App()
               />
             </div>
 
-            <div class="inputFieldSingle">
+            <div className="inputFieldSingle">
               <label htmlFor="clientAddress">Client address:</label>
               <textarea
                 type="text"
@@ -187,7 +186,7 @@ function App()
               </textarea>
             </div>
 
-            <div class="gap"></div>
+            <div className="gap"></div>
 
             <TableForm
               quantity={quantity}
@@ -197,11 +196,12 @@ function App()
               price={price}
               setPrice={setPrice}
               total={total}
+              setTotal={setTotal}
             />
 
-            <div class="gap"></div>
+            <div className="gap"></div>
 
-            <div class="inputFieldSingle">
+            <div className="inputFieldSingle">
               <label htmlFor="notes">Notes:</label>
               <textarea
                 name="notes"
@@ -212,9 +212,9 @@ function App()
               </textarea>
             </div>
 
-            <div class="gap"></div>
+            <div className="gap"></div>
 
-            <div class="inputField">
+            <div className="inputField">
               <label htmlFor="accountName">Bank account name:</label>
               <input
                 type="text"
@@ -225,7 +225,7 @@ function App()
               />
             </div>
 
-            <div class="inputField">
+            <div className="inputField">
               <label htmlFor="accountNumber">Bank account number:</label>
               <input
                 type="text"
@@ -236,7 +236,7 @@ function App()
               />
             </div>
 
-            <div class="inputField">
+            <div className="inputField">
               <label htmlFor="sortCode">Bank sort code:</label>
               <input
                 type="text"
@@ -247,7 +247,7 @@ function App()
               />
             </div>
 
-            <div class="inputField">
+            <div className="inputField">
               <label htmlFor="paypalEmail">Paypal email:</label>
               <input
                 type="text"
@@ -258,7 +258,7 @@ function App()
               />
             </div>
 
-            <button class="previewButton" onClick={() => setShowInvoice(true)}>Preview Invoice</button>
+            <button className="previewButton" onClick={() => setShowInvoice(true)}>Preview Invoice</button>
           </div>
         )
       }
