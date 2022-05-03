@@ -261,6 +261,23 @@ td
           width: 90%;
         }
 
+        .addTableItem
+        {
+          width: 30px;
+          height: 30px;
+          margin: 0px;
+          padding: 0px;
+          text-align: center;
+          vertical-align: middle;
+          color: black;
+          background-color: #b7ffb9d4;
+        }
+
+          .addTableItem:hover
+          {
+            border-color: #b7ffb9d4;
+          }
+
     .inputFieldSingle
     {
       display: flex;

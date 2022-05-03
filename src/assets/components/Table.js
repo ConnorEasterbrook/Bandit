@@ -1,5 +1,12 @@
-export default function Table({ quantity, desc, price, total })
+import { useEffect } from "react"
+
+export default function Table({ quantity, desc, price, total, setTotal })
 {
+    useEffect(() => {
+        const calculateTotal = (total) => { setTotal (quantity * price) }
+        calculateTotal (total)
+    }, [])
+
     return (
         <table>
             <thead>

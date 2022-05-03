@@ -1,6 +1,6 @@
-export default function TableForm({ quantity, setQuantity, desc, setDesc, price, setPrice, total, setTotal })
+export default function TableInput({ quantity, setQuantity, desc, setDesc, price, setPrice })
 {
-    const calculateTotal = (total) => { setTotal (quantity * price) }
+    // const newItems = { id: }
 
     return (
         <div className="tableForm">
@@ -42,6 +42,8 @@ export default function TableForm({ quantity, setQuantity, desc, setDesc, price,
                     onChange={(e) => setPrice(e.target.value)}
                 />
             </div>
+
+            <button className="addTableItem">+</button>
         </div>
     )
 }
