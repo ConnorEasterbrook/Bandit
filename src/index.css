@@ -204,6 +204,8 @@ thead
 td
 {
   width: auto;
+  border: dotted;
+  border-width: 1px;
 }
 
   .previewDiv
@@ -278,6 +280,17 @@ td
             border-color: #b7ffb9d4;
           }
 
+        .showTable
+        {
+          width: 100%;
+        }
+
+          .showTable table
+          {
+            margin: 10px 0px;
+            padding: 0px 5% 0px 5%;
+          }
+
     .inputFieldSingle
     {
       display: flex;
@@ -339,10 +352,10 @@ td
     vertical-align: middle;
   }
 
-    .secondaryBody .smallTableCol
-    {
-      width: 10%;
-    }
+  .smallTableCol
+  {
+    width: 10%;
+  }
 
   .gap
   {

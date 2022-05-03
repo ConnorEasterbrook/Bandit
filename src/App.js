@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ClientDetails from "./assets/components/ClientDetails";
 import ClientDetailsInput from "./assets/components/ClientDetailsInput";
 import Footer from "./assets/components/Footer";
@@ -7,6 +7,7 @@ import Header from "./assets/components/Header";
 import Notes from "./assets/components/Notes";
 import Table from "./assets/components/Table";
 import TableInput from "./assets/components/TableInput";
+import TableData from "./assets/components/table-data.json"
 import UserDetails from "./assets/components/UserDetails";
 import UserDetailsInput from "./assets/components/UserDetailsInput";
 
@@ -30,6 +31,7 @@ function App()
   const [desc, setDesc] = useState("");
   const [price, setPrice] = useState("");
   const [total, setTotal] = useState("");
+  const [tableData, setTableData] = useState(TableData)
 
   // Notes
   const [notes, setNotes] = useState("");
@@ -79,8 +81,8 @@ function App()
                 price={price}
                 total={total}
                 setTotal={setTotal}
+                tableData={tableData}
               />
-
 
               <Notes
                 notes={notes}
@@ -134,6 +136,8 @@ function App()
               setDesc={setDesc}
               price={price}
               setPrice={setPrice}
+              tableData={tableData}
+              setTableData={setTableData}
             />
 
             <div className="gap"></div>
@@ -153,7 +157,7 @@ function App()
 
             <div className="gap"></div>
 
-            <FooterInput 
+            <FooterInput
               accountName={accountName}
               setAccountName={setAccountName}
               accountNumber={accountNumber}
