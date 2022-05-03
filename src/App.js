@@ -4,21 +4,34 @@ import Footer from "./assets/components/Footer";
 import Header from "./assets/components/Header";
 import Notes from "./assets/components/Notes";
 import Table from "./assets/components/Table";
+import TableForm from "./assets/components/TableForm";
 import UserDetails from "./assets/components/UserDetails";
 
 function App()
 {
+  // User details
   const [name, setName] = useState("");
   const [address, setAddress] = useState("");
   const [invoiceDate, setInvoiceDate] = useState("");
   const [invoiceNumber, setInvoiceNumber] = useState("");
   const [invoiceReference, setInvoiceReference] = useState("");
   const [dueDate, setDueDate] = useState("");
+
+  // Client details
   // const [name, setName] = useState(""); ADD LOGO
   const [clientName, setClientName] = useState("");
   const [clientAddress, setClientAddress] = useState("");
-  // const [name, setName] = useState(""); ADD TABLE
+
+  // Table details
+  const [quantity, setQuantity] = useState("");
+  const [desc, setDesc] = useState("");
+  const [price, setPrice] = useState("");
+  const [total, setTotal] = useState("");
+
+  // Notes
   const [notes, setNotes] = useState("");
+
+  // Footer details
   const [accountName, setAccountName] = useState("");
   const [accountNumber, setAccountNumber] = useState("");
   const [sortCode, setSortCode] = useState("");
@@ -33,7 +46,6 @@ function App()
           <div class="mainBody">
             <div class="secondaryBody">
               <Header />
-              <div class="gap"></div>
 
               <div class="row">
                 {/* Client details */}
@@ -58,7 +70,15 @@ function App()
               </div>
 
               {/* Table, Notes && Footer */}
-              <Table />
+              <Table
+                quantity={quantity}
+                desc={desc}
+                price={price}
+                total={total}
+                setTotal={setTotal}
+              />
+
+
               <Notes
                 notes={notes}
               />
@@ -166,6 +186,18 @@ function App()
                 onChange={(e) => setClientAddress(e.target.value)}>
               </textarea>
             </div>
+
+            <div class="gap"></div>
+
+            <TableForm
+              quantity={quantity}
+              setQuantity={setQuantity}
+              desc={desc}
+              setDesc={setDesc}
+              price={price}
+              setPrice={setPrice}
+              total={total}
+            />
 
             <div class="gap"></div>
 
