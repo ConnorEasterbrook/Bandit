@@ -7,7 +7,6 @@ import Header from "./assets/components/Header";
 import Notes from "./assets/components/Notes";
 import Table from "./assets/components/Table";
 import TableInput from "./assets/components/TableInput";
-import TableData from "./assets/components/table-data.json"
 import UserDetails from "./assets/components/UserDetails";
 import UserDetailsInput from "./assets/components/UserDetailsInput";
 
@@ -27,11 +26,15 @@ function App()
   const [clientAddress, setClientAddress] = useState("");
 
   // Table details
-  const [quantity, setQuantity] = useState("");
-  const [desc, setDesc] = useState("");
-  const [price, setPrice] = useState("");
+  const [tableData, setTableData] = useState([])
   const [total, setTotal] = useState("");
-  const [tableData, setTableData] = useState(TableData)
+  const [quantity, setQuantity] = useState("");
+  const [price, setPrice] = useState("");
+  
+  useEffect(() => {
+    const calculateTotal = (total) => { setTotal (quantity * price) }
+    calculateTotal (total)
+}, [])
 
   // Notes
   const [notes, setNotes] = useState("");
@@ -76,11 +79,6 @@ function App()
 
               {/* Table, Notes && Footer */}
               <Table
-                quantity={quantity}
-                desc={desc}
-                price={price}
-                total={total}
-                setTotal={setTotal}
                 tableData={tableData}
               />
 
@@ -130,12 +128,6 @@ function App()
             <div className="gap"></div>
 
             <TableInput
-              quantity={quantity}
-              setQuantity={setQuantity}
-              desc={desc}
-              setDesc={setDesc}
-              price={price}
-              setPrice={setPrice}
               tableData={tableData}
               setTableData={setTableData}
             />

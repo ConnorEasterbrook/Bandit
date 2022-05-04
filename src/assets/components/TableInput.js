@@ -33,7 +33,8 @@ export default function TableInput({ tableData, setTableData })
             id: nanoid(),
             quantity: addTableData.quantityRow,
             desc: addTableData.descRow,
-            price: addTableData.priceRow
+            price: addTableData.priceRow,
+            total: addTableData.quantityRow * addTableData.priceRow
         }
 
         const newRows = [...tableData, newRow];
@@ -51,8 +52,6 @@ export default function TableInput({ tableData, setTableData })
                     name="quantityRow"
                     id="smallTextTable"
                     placeholder="Quantity."
-                    // value={quantity}
-                    // onChange={(e) => setQuantity(e.target.value)}
                     onChange={handleAddFormChange}
                 />
             </div>
@@ -66,8 +65,6 @@ export default function TableInput({ tableData, setTableData })
                     name="descRow"
                     id="bigTextTable"
                     placeholder="Enter the item's description."
-                    // value={desc}
-                    // onChange={(e) => setDesc(e.target.value)}
                     onChange={handleAddFormChange}
                 />
             </div>
@@ -81,8 +78,6 @@ export default function TableInput({ tableData, setTableData })
                     name="priceRow"
                     id="smallTextTable"
                     placeholder="Price."
-                    // value={price}
-                    // onChange={(e) => setPrice(e.target.value)}
                     onChange={handleAddFormChange}
                 />
             </div>

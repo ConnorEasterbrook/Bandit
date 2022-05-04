@@ -1,12 +1,7 @@
 import { useEffect, useState } from "react"
 
-export default function Table({ quantity, desc, price, total, setTotal, tableData })
+export default function Table({ total, tableData })
 {
-    useEffect(() => {
-        const calculateTotal = (total) => { setTotal (quantity * price) }
-        calculateTotal (total);
-    }, []) 
-
     return (
         <table>
             <thead>
@@ -28,7 +23,7 @@ export default function Table({ quantity, desc, price, total, setTotal, tableDat
 
             <tbody>
                 {tableData.map ((invoiceTable) => 
-                (
+                    (
                     <tr>
                         <td>
                             {invoiceTable.quantity}
@@ -40,7 +35,7 @@ export default function Table({ quantity, desc, price, total, setTotal, tableDat
                             £{invoiceTable.price}
                         </td>
                         <td>
-                            £{total}
+                            £{invoiceTable.total}
                         </td>
                     </tr>
                 ))}
