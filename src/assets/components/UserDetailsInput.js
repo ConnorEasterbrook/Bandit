@@ -49,7 +49,7 @@ export default function UserDetailsInput({ name, setName, address, setAddress, i
             <div className="inputField">
               <label htmlFor="invoiceNumber">Invoice number:</label>
               <input
-                type="text"
+                type="number"
                 id="smallText"
                 placeholder="Enter your invoice number."
                 value={invoiceNumber}

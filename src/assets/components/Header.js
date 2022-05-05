@@ -7,7 +7,7 @@ export default function Header()
 
     const downloadDocument = () =>
     {
-
+        
     }
 
     const sendDocument = () =>
@@ -32,19 +32,14 @@ export default function Header()
                         <ul>
                             <li>
                                 <button className="print" onClick={printDocument}>
-                                    Print
+                                    Print / Download
                                 </button>
                             </li>
-                            <li>
-                                <button className="download" onClick={downloadDocument}>
-                                    Download
-                                </button>
-                            </li>
-                            <li>
-                                <button className="send" onClick={sendDocument}>
+                            {/* <li>
+                                <button className="download" onClick={sendDocument}>
                                     Send
                                 </button>
-                            </li>
+                            </li> */}
                         </ul>
                     </div>
                 </div>

@@ -16,7 +16,7 @@ export default function FooterInput({ accountName, setAccountName, accountNumber
             <div className="inputField">
               <label htmlFor="accountNumber">Bank account number:</label>
               <input
-                type="text"
+                type="number"
                 id="smallText"
                 placeholder="Enter your account number."
                 value={accountNumber}
@@ -27,7 +27,7 @@ export default function FooterInput({ accountName, setAccountName, accountNumber
             <div className="inputField">
               <label htmlFor="sortCode">Bank sort code:</label>
               <input
-                type="text"
+                type="number"
                 id="smallText"
                 placeholder="Enter your sort code."
                 value={sortCode}

@@ -41,6 +41,15 @@ export default function TableInput({ tableData, setTableData })
         setTableData(newRows);
     }
 
+    function validateNumbersLength()
+    {
+        var z = document.forms["myForm"]["num"].value;
+        if (!z.match(/^\d+/))
+        {
+            alert("Please only enter numeric characters.")
+        }
+    }
+
     return (
         <div className="tableForm">
             <div className="inputFieldTableSmall">
@@ -48,7 +57,7 @@ export default function TableInput({ tableData, setTableData })
                     Item quantity
                 </label>
                 <input
-                    type="text"
+                    type="number"
                     name="quantityRow"
                     id="smallTextTable"
                     placeholder="Quantity."
@@ -74,7 +83,7 @@ export default function TableInput({ tableData, setTableData })
                     Item price
                 </label>
                 <input
-                    type="text"
+                    type="number"
                     name="priceRow"
                     id="smallTextTable"
                     placeholder="Price."
