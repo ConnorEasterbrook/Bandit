@@ -1,14 +1,14 @@
 body 
 {
-  margin: 0;
   font-family: 'Helvetica';
-    src: url('assets/font/Helvetica.ttf');
+  src: url('assets/font/Helvetica.ttf');
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  margin: auto;
+  vertical-align: middle;
   
-  width: 210mm;
-  height: 297mm;
-  padding: 5%;
+  max-width: 210mm;
+  /* height: 297mm; */
   background-color: #dadada;
 }
 
@@ -22,6 +22,7 @@ main
 {
   font-size: small;
   background-color: white;
+  margin: auto;
 
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
@@ -52,6 +53,7 @@ ul
 
 header
 {
+  margin-bottom: 10px;
   border: 10px;
   border: solid;
   border-color: black;
@@ -113,9 +115,8 @@ button
 {
   font-size: large;
   font-weight: bold;
-  border-width: 0px;
-  border-radius: 10px;
   padding: 10px;
+  border-radius: 10px;
   border-width: 5px;
   border-color: transparent;
   color: white;
@@ -135,6 +136,7 @@ button
 label
 {
   margin-bottom: 5px;
+  font-weight: bold;
 }
 
 input, textarea
@@ -187,14 +189,107 @@ article
   flex-basis: 100%;
 }
 
+table
+{
+  padding: 5% 5% 0 5%;
+  width: 100%;
+}
+
+thead
+{
+  font-weight: bold;
+  background-color: #f1f1f1;
+}
+
+td
+{
+  width: auto;
+  border: dotted;
+  border-width: 1px;
+}
+
   .previewDiv
   {
     display: flex;
-    /* flex-flow: column wrap; */
     flex-wrap: wrap;
     flex-direction: row;
-    padding: 10px;
+    padding: 5% 10px;
+    justify-content: center;
+    text-align: center;
   }
+
+    .tableForm
+    {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: center;
+      text-align: center;
+      width: 100%;
+      padding: 0px 5% 0px 5%;
+    }
+
+      .inputFieldTableSmall
+      {
+        display: flex;
+        flex-flow: column wrap;
+        flex: 1 1 15%;
+      }
+
+      .inputFieldTableBig
+      {
+        display: flex;
+        flex-flow: column wrap;
+        flex: 1 1 70%;
+      }
+
+        #smallTextTable
+        {
+          padding: 10px;
+          border-width: 0px;
+          margin-bottom: 10px;
+          margin-left: auto;
+          margin-right: auto;
+          width: 80%;
+        }
+
+        #bigTextTable
+        {
+          padding: 10px;
+          margin-bottom: 10px;
+          margin-left: auto;
+          margin-right: auto;
+          border-width: 0px;
+          width: 90%;
+        }
+
+        .addTableItem
+        {
+          width: 30px;
+          height: 30px;
+          margin: 0px;
+          padding: 0px;
+          text-align: center;
+          vertical-align: middle;
+          color: black;
+          background-color: #b7ffb9d4;
+        }
+
+          .addTableItem:hover
+          {
+            border-color: #b7ffb9d4;
+          }
+
+        .showTable
+        {
+          width: 100%;
+        }
+
+          .showTable table
+          {
+            margin: 10px 0px;
+            padding: 0px 5% 0px 5%;
+          }
 
     .inputFieldSingle
     {
@@ -220,23 +315,29 @@ article
         padding: 10px;
         border-width: 0px;
         margin-bottom: 10px;
-        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+        width: 70%;
       }
 
       #bigText
       {
         padding: 10px;
         margin-bottom: 10px;
+        margin-left: auto;
+        margin-right: auto;
         border-width: 0px;
-        width: 80%;
+        width: 85%;
       }
 
       #dateText
       {
         padding: 10px;
         margin-bottom: 10px;
+        margin-left: auto;
+        margin-right: auto;
         border-width: 0px;
-        width: 40%;
+        width: 50%;
       }
 
   .mainBody
@@ -251,10 +352,18 @@ article
     vertical-align: middle;
   }
 
+  .smallTableCol
+  {
+    width: 10%;
+  }
+
   .gap
   {
-    padding: 20px;
+    margin: 20px;
     width: 100%;
+    border-style: dashed;
+    border-width: 1px;
+    border-color: black;
   }
 
   .row
@@ -303,9 +412,12 @@ article
     white-space: pre-line;
   }
 
-    .listImage
+    .compImage
     {
       padding-bottom: 20px;
+      max-width: 50%;
+      max-height: 50%;
+      object-fit: contain;
     }
 
   .notes
@@ -355,3 +467,31 @@ article
       color: white;
       background: rgb(104, 129, 255);
     }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button 
+{
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+@media print
+{
+  .noPrint
+  {
+    display: none;
+  }
+
+  main
+  {
+    box-shadow: rgba(0, 0, 0, 0) 0px 3px 8px;
+  }
+
+  .invoice
+  {
+    display: block;
+  }
+}
