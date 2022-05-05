@@ -22,7 +22,8 @@ export default function Footer({accountName, accountNumber, sortCode, paypalEmai
                     right to charge interest on invoices that remain unpaid 30 days after the invoice date. Our
                     standard interest rate is 10.75% (10% plus the Bank of England base rate). The Late
                     Payment of Commercial Debts (Interest) Act 1998 applies to this invoice. Any queries
-                    regarding this invoice should be raised within 7 days of the invoice date.</li>
+                    regarding this invoice should be raised within 7 days of the invoice date. This invoice was
+                    created using Goatbandit's Timedit web application.</li>
             </ul>
         </footer>
     )

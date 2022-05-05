@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import ClientDetails from "./assets/components/ClientDetails";
 import ClientDetailsInput from "./assets/components/ClientDetailsInput";
 import Footer from "./assets/components/Footer";
@@ -19,23 +19,15 @@ function App()
   const [invoiceNumber, setInvoiceNumber] = useState("");
   const [invoiceReference, setInvoiceReference] = useState("");
   const [dueDate, setDueDate] = useState("");
+  const [logo, setLogo] = useState(null);
+  const [logoURL, setLogoURL] = useState([]);
 
   // Client details
-  // const [name, setName] = useState(""); ADD LOGO
   const [clientName, setClientName] = useState("");
   const [clientAddress, setClientAddress] = useState("");
 
   // Table details
   const [tableData, setTableData] = useState([])
-  const [total, setTotal] = useState("");
-  const [quantity, setQuantity] = useState("");
-  const [price, setPrice] = useState("");
-
-  useEffect(() =>
-  {
-    const calculateTotal = (total) => { setTotal(quantity * price) }
-    calculateTotal(total)
-  }, [])
 
   // Notes
   const [notes, setNotes] = useState("");
@@ -63,6 +55,7 @@ function App()
                   {/* Client details */}
                   <div className="column">
                     <ClientDetails
+                      logo={logo}
                       clientName={clientName}
                       clientAddress={clientAddress}
                     />
@@ -121,6 +114,10 @@ function App()
               setInvoiceNumber={setInvoiceNumber}
               invoiceReference={invoiceReference}
               setInvoiceReference={setInvoiceReference}
+              logo={logo}
+              setLogo={setLogo}
+              logoURL={logoURL}
+              setLogoURL={setLogoURL}
             />
 
             <div className="gap"></div>

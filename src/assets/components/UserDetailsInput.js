@@ -1,4 +1,6 @@
-export default function UserDetailsInput({ name, setName, address, setAddress, invoiceDate, setInvoiceDate, invoiceNumber, setInvoiceNumber, invoiceReference, setInvoiceReference, dueDate, setDueDate })
+import { useEffect } from "react";
+
+export default function UserDetailsInput({ name, setName, address, setAddress, invoiceDate, setInvoiceDate, invoiceNumber, setInvoiceNumber, invoiceReference, setInvoiceReference, dueDate, setDueDate, logo, setLogo, logoURL, setLogoURL })
 {
     return (
         <div className="tableForm">
@@ -65,6 +67,20 @@ export default function UserDetailsInput({ name, setName, address, setAddress, i
                 placeholder="Enter your invoice reference."
                 value={invoiceReference}
                 onChange={(e) => setInvoiceReference(e.target.value)}
+              />
+            </div>
+
+            <div className="inputFieldSingle">
+              <label htmlFor="invoiceReference">Company Logo:</label>
+              {/* <FileUploader
+                onFileSelectSuccess={(file) => setLogo(file)}
+                onFileSelectError={({ error }) => alert(error)}
+              /> */}
+              <input
+                type="file"
+                id="dateText"
+                placeholder="Enter your invoice reference."
+                onChange={(e) => setLogo(e.target.files[0])}
               />
             </div>
         </div>

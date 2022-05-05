@@ -1,10 +1,10 @@
-export default function ClientDetails({clientName, clientAddress})
+export default function ClientDetails({ logo, clientName, clientAddress })
 {
     return (
         <div className="clientDetails">
             <ul>
                 <li id="listImage">
-                    <img src={`${process.env.PUBLIC_URL}/assets/images/logo.png`} alt="Company Logo" className="compImage">
+                    <img src={URL.createObjectURL(logo)} alt="Company Logo" className="compImage">
                     </img>
                 </li>
                 <li id="yourName" className="listHeader">{clientName}</li>
