@@ -291,6 +291,24 @@ td
             padding: 0px 5% 0px 5%;
           }
 
+          @media print
+          {
+            .noPrint
+            {
+              display: none;
+            }
+
+            main
+            {
+              box-shadow: rgba(0, 0, 0, 0) 0px 3px 8px;
+            }
+
+            .invoice
+            {
+              display: block;
+            }
+          }
+
     .inputFieldSingle
     {
       display: flex;

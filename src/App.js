@@ -30,11 +30,12 @@ function App()
   const [total, setTotal] = useState("");
   const [quantity, setQuantity] = useState("");
   const [price, setPrice] = useState("");
-  
-  useEffect(() => {
-    const calculateTotal = (total) => { setTotal (quantity * price) }
-    calculateTotal (total)
-}, [])
+
+  useEffect(() =>
+  {
+    const calculateTotal = (total) => { setTotal(quantity * price) }
+    calculateTotal(total)
+  }, [])
 
   // Notes
   const [notes, setNotes] = useState("");
@@ -53,47 +54,53 @@ function App()
         (
           <div className="mainBody">
             <div className="secondaryBody">
-              <Header />
-
-              <div className="row">
-                {/* Client details */}
-                <div className="column">
-                  <ClientDetails
-                    clientName={clientName}
-                    clientAddress={clientAddress}
-                  />
-                </div>
-
-                {/* Your details */}
-                <div className="column">
-                  <UserDetails
-                    name={name}
-                    address={address}
-                    invoiceDate={invoiceDate}
-                    invoiceNumber={invoiceNumber}
-                    invoiceReference={invoiceReference}
-                    dueDate={dueDate}
-                  />
-                </div>
+              <div className="noPrint">
+                <Header />
               </div>
 
-              {/* Table, Notes && Footer */}
-              <Table
-                tableData={tableData}
-              />
+              <div className="invoice">
+                <div className="row">
+                  {/* Client details */}
+                  <div className="column">
+                    <ClientDetails
+                      clientName={clientName}
+                      clientAddress={clientAddress}
+                    />
+                  </div>
 
-              <Notes
-                notes={notes}
-              />
-              <Footer
-                accountName={accountName}
-                accountNumber={accountNumber}
-                sortCode={sortCode}
-                paypalEmail={paypalEmail}
-              />
+                  {/* Your details */}
+                  <div className="column">
+                    <UserDetails
+                      name={name}
+                      address={address}
+                      invoiceDate={invoiceDate}
+                      invoiceNumber={invoiceNumber}
+                      invoiceReference={invoiceReference}
+                      dueDate={dueDate}
+                    />
+                  </div>
+                </div>
 
-              <div className="bottomSection">
-                <button className="editInfo" onClick={() => setShowInvoice(false)}>Edit information</button>
+                {/* Table, Notes && Footer */}
+                <Table
+                  tableData={tableData}
+                />
+
+                <Notes
+                  notes={notes}
+                />
+                <Footer
+                  accountName={accountName}
+                  accountNumber={accountNumber}
+                  sortCode={sortCode}
+                  paypalEmail={paypalEmail}
+                />
+              </div>
+
+              <div className="noPrint">
+                <div className="bottomSection">
+                  <button className="editInfo" onClick={() => setShowInvoice(false)}>Edit information</button>
+                </div>
               </div>
 
             </div>
