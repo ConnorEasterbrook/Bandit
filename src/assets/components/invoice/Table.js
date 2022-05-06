@@ -24,7 +24,7 @@ export default function Table({ total, tableData })
             <tbody>
                 {tableData.map ((invoiceTable) => 
                     (
-                    <tr>
+                    <tr key={invoiceTable.id}>
                         <td>
                             {invoiceTable.quantity}
                         </td>

@@ -1,14 +1,14 @@
 import { useState } from "react";
-import ClientDetails from "./assets/components/ClientDetails";
-import ClientDetailsInput from "./assets/components/ClientDetailsInput";
-import Footer from "./assets/components/Footer";
-import FooterInput from "./assets/components/FooterInput";
-import Header from "./assets/components/Header";
-import Notes from "./assets/components/Notes";
-import Table from "./assets/components/Table";
-import TableInput from "./assets/components/TableInput";
-import UserDetails from "./assets/components/UserDetails";
-import UserDetailsInput from "./assets/components/UserDetailsInput";
+import ClientDetails from "./assets/components/invoice/ClientDetails";
+import ClientDetailsInput from "./assets/components/invoice/ClientDetailsInput";
+import Footer from "./assets/components/invoice/Footer";
+import FooterInput from "./assets/components/invoice/FooterInput";
+import Header from "./assets/components/invoice/Header";
+import Notes from "./assets/components/invoice/Notes";
+import Table from "./assets/components/invoice/Table";
+import TableInput from "./assets/components/invoice/TableInput";
+import UserDetails from "./assets/components/invoice/UserDetails";
+import UserDetailsInput from "./assets/components/invoice/UserDetailsInput";
 
 function App()
 {

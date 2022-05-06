@@ -3,6 +3,8 @@ import { nanoid } from 'nanoid';
 
 export default function TableInput({ tableData, setTableData })
 {
+    const [editTableId, setEditTableId] = useState(null);
+
     const handleAddFormChange = (event) =>
     {
         event.preventDefault();
@@ -41,14 +43,16 @@ export default function TableInput({ tableData, setTableData })
         setTableData(newRows);
     }
 
-    function validateNumbersLength()
+    const handleDeleteClick = (invoiceTable) => 
     {
-        var z = document.forms["myForm"]["num"].value;
-        if (!z.match(/^\d+/))
-        {
-            alert("Please only enter numeric characters.")
-        }
-    }
+        const newTableData = [...tableData];
+    
+        const index = tableData.findIndex((invoiceTable) => invoiceTable.id === editTableId);
+    
+        newTableData.splice(index, 1);
+    
+        setTableData(newTableData);
+      };
 
     return (
         <div className="tableForm">
@@ -98,7 +102,7 @@ export default function TableInput({ tableData, setTableData })
                     <tbody>
                         {tableData.map((invoiceTable) =>
                         (
-                            <tr>
+                            <tr key={invoiceTable.id}>
                                 <td className="smallTableCol">
                                     {invoiceTable.quantity}
                                 </td>
@@ -107,6 +111,9 @@ export default function TableInput({ tableData, setTableData })
                                 </td>
                                 <td className="smallTableCol">
                                     £{invoiceTable.price}
+                                </td>
+                                <td className="smallTableCol">
+                                    <button className="addTableItem" onClick={handleDeleteClick}>-</button>
                                 </td>
                             </tr>
                         ))}
