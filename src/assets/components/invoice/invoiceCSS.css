@@ -1,0 +1,497 @@
+body 
+{
+  font-family: 'Helvetica';
+  src: url('../../../assets/font/Helvetica.ttf');
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: auto;
+  vertical-align: middle;
+  
+  max-width: 210mm;
+  /* height: 297mm; */
+  background-color: #dadada;
+}
+
+code 
+{
+  /* font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace; */
+}
+
+main
+{
+  font-size: small;
+  background-color: white;
+  margin: auto;
+
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+h1
+{
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+h2
+{
+  text-transform: uppercase;
+  font-weight: normal;
+  margin-bottom: 5px;
+}
+
+p
+{
+  margin: 0px;
+}
+
+ul
+{
+  list-style: none;
+}
+
+header
+{
+  margin-bottom: 10px;
+  border: 10px;
+  border: solid;
+  border-color: black;
+}
+
+  header .title
+  {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+
+    font-weight: bold;
+    letter-spacing: 2px;
+  }
+
+    header .print
+    {
+      background-color: #476A6F;
+    }
+
+      header .print:hover
+      {
+        border-color: #476A6F;
+      }
+
+    header .download
+    {
+      background-color: #519E8A;
+    }
+
+    header .download:hover
+    {
+      border-color: #519E8A;
+    }
+
+    header .send
+    {
+      background-color: #7EB09B;
+    }
+
+    header .send:hover
+    {
+      border-color: #7EB09B;
+    }
+
+header ul
+{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+
+  padding-right:15%;
+  padding-left: 15%;
+}
+
+button
+{
+  font-size: large;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 10px;
+  border-width: 5px;
+  border-color: transparent;
+  color: white;
+  background: rgb(104, 129, 255);
+
+  user-select: none;
+  transition: all 0.5s;
+}
+
+  button:hover
+  {
+    color: black;
+    background-color: #00000000;
+    border-color: rgb(104, 129, 255);
+  }
+
+label
+{
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input, textarea
+{
+  font-weight: bold;
+  background-color: #f1f1f1;
+}
+
+footer
+{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+  list-style: none;
+}
+
+  footer ul
+  {
+    font-size: smaller;
+    padding: 7.5%;
+  }
+
+  footer li
+  {
+    display: inline-block;
+  }
+
+  footer span
+  {
+    font-weight: bold;
+  }
+
+section
+{
+  display: flex;
+  align-items: center;
+  justify-items: end;
+  flex-direction: column;
+}
+
+article
+{
+  display: flex;
+  align-items: center;
+  justify-items: end;
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex-basis: 100%;
+}
+
+table
+{
+  padding: 5% 5% 0 5%;
+  width: 100%;
+}
+
+thead
+{
+  font-weight: bold;
+  background-color: #f1f1f1;
+}
+
+td
+{
+  width: auto;
+  border: dotted;
+  border-width: 1px;
+}
+
+  .previewDiv
+  {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 5% 10px;
+    justify-content: center;
+    text-align: center;
+  }
+
+    .tableForm
+    {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: center;
+      text-align: center;
+      width: 100%;
+      padding: 0px 5% 0px 5%;
+    }
+
+      .inputFieldTableSmall
+      {
+        display: flex;
+        flex-flow: column wrap;
+        flex: 1 1 15%;
+      }
+
+      .inputFieldTableBig
+      {
+        display: flex;
+        flex-flow: column wrap;
+        flex: 1 1 70%;
+      }
+
+        #smallTextTable
+        {
+          padding: 10px;
+          border-width: 0px;
+          margin-bottom: 10px;
+          margin-left: auto;
+          margin-right: auto;
+          width: 80%;
+        }
+
+        #bigTextTable
+        {
+          padding: 10px;
+          margin-bottom: 10px;
+          margin-left: auto;
+          margin-right: auto;
+          border-width: 0px;
+          width: 90%;
+        }
+
+        .addTableItem
+        {
+          width: 30px;
+          height: 30px;
+          margin: 0px;
+          padding: 0px;
+          text-align: center;
+          vertical-align: middle;
+          color: black;
+          background-color: #b7ffb9d4;
+        }
+
+          .addTableItem:hover
+          {
+            border-color: #b7ffb9d4;
+          }
+
+        .showTable
+        {
+          width: 100%;
+        }
+
+          .showTable table
+          {
+            margin: 10px 0px;
+            padding: 0px 5% 0px 5%;
+          }
+
+    .inputFieldSingle
+    {
+      display: flex;
+      flex-flow: column wrap;
+      width: 100%;
+    }
+
+    .inputField
+    {
+      display: flex;
+      flex-flow: column wrap;
+      flex: 1 1 50%;
+    }
+
+      .singleRow
+      {
+        width: 100%;
+      }
+
+      #smallText
+      {
+        padding: 10px;
+        border-width: 0px;
+        margin-bottom: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 70%;
+      }
+
+      #bigText
+      {
+        padding: 10px;
+        margin-bottom: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        border-width: 0px;
+        width: 85%;
+      }
+
+      #dateText
+      {
+        padding: 10px;
+        margin-bottom: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        border-width: 0px;
+        width: 50%;
+      }
+
+  .mainBody
+  {
+    display: table;
+    margin: auto;
+  }
+
+  .secondaryBody
+  {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  .smallTableCol
+  {
+    width: 10%;
+  }
+
+  .gap
+  {
+    margin: 20px;
+    width: 100%;
+    border-style: dashed;
+    border-width: 1px;
+    border-color: black;
+  }
+
+  .row
+  {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+
+    padding: 0px;
+    margin: 0px;
+  }
+
+  .column
+  {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+  }
+
+  .yourDetails
+  {
+    align-items: flex-end;
+    /* width: 42mm; */
+    width: 63mm;
+    padding-left: 30%;
+    white-space: pre-line;
+  }
+
+    #yourAddress
+    {
+      padding-bottom: 20px;
+    }
+
+    .listHeader
+    {
+      font-weight: bold;
+      padding-top: 10px;
+    }
+
+  .clientDetails
+  {
+    align-items: flex-start;
+    padding-left: 5%;
+    white-space: pre-line;
+  }
+
+    .compImage
+    {
+      padding-bottom: 20px;
+      max-width: 50%;
+      max-height: 50%;
+      object-fit: contain;
+    }
+
+  .notes
+  {
+    align-items: flex-start;
+    font-size: medium;
+    width: 60%;
+    margin-top: 5%;
+    padding-left: 7.5%;
+  }
+
+    .notes h2
+    {
+      font-size: medium;
+      font-weight: bold;
+      text-transform: none;    
+    }
+
+  .bankTransferFooter
+  {
+    margin: 0px;
+    padding-bottom: 0px;
+    width: 100%;
+  }
+
+  .interestRateFooter
+  {
+    margin: 0px;
+    padding-top: 10px;
+    width: 100%;
+  }
+
+  .bottomSection
+  {
+    border: 2px;
+    border: solid;
+    border-color: black;
+  }
+
+    .editInfo
+    {
+      font-size: normal;
+      font-weight: bold;
+      border-radius: 10px;
+      margin: 2%;
+      padding: 10px;
+      color: white;
+      background: rgb(104, 129, 255);
+    }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button 
+{
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+@media print
+{
+  .noPrint
+  {
+    display: none;
+  }
+
+  main
+  {
+    box-shadow: rgba(0, 0, 0, 0) 0px 3px 8px;
+  }
+
+  .invoice
+  {
+    display: block;
+  }
+}
