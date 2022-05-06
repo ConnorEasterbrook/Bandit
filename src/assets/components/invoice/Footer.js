@@ -1,4 +1,4 @@
-export default function Footer({accountName, accountNumber, sortCode, paypalEmail})
+export default function Footer({accountName, accountNumber, sortCode, paypalEmail, extraInfo})
 {
     return (
         <footer>
@@ -18,11 +18,7 @@ export default function Footer({accountName, accountNumber, sortCode, paypalEmai
           <li>Website.</li> */}
             </ul>
             <ul className="interestRateFooter">
-                <li>Settlement of this invoice is required within 15 days from the invoice date. We reserve the
-                    right to charge interest on invoices that remain unpaid 30 days after the invoice date. Our
-                    standard interest rate is 10.75% (10% plus the Bank of England base rate). The Late
-                    Payment of Commercial Debts (Interest) Act 1998 applies to this invoice. Any queries
-                    regarding this invoice should be raised within 7 days of the invoice date. This invoice was
+                <li>{extraInfo}This invoice was
                     created using Goatbandit's Timedit web application.</li>
             </ul>
         </footer>

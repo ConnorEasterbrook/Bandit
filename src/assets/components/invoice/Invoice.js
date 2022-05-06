@@ -38,6 +38,7 @@ function Invoice()
   const [accountNumber, setAccountNumber] = useState("");
   const [sortCode, setSortCode] = useState("");
   const [paypalEmail, setPaypalEmail] = useState("");
+  const [extraInfo, setExtraInfo] = useState("Settlement of this invoice is required within 15 days from the invoice date. We reserve the right to charge interest on invoices that remain unpaid 30 days after the invoice date. Our standard interest rate is 10.75% (10% plus the Bank of England base rate). The Late Payment of Commercial Debts (Interest) Act 1998 applies to this invoice. Any queries regarding this invoice should be raised within 7 days of the invoice date. ");
 
   const [showInvoice, setShowInvoice] = useState(false);
 
@@ -88,6 +89,7 @@ function Invoice()
                   accountNumber={accountNumber}
                   sortCode={sortCode}
                   paypalEmail={paypalEmail}
+                  extraInfo={extraInfo}
                 />
               </div>
 
@@ -143,7 +145,6 @@ function Invoice()
               <div className="inputFieldSingle">
                 <label htmlFor="notes">Notes:</label>
                 <textarea
-                  name="notes"
                   id="bigText"
                   placeholder="Enter any additional notes."
                   value={notes}
@@ -163,6 +164,8 @@ function Invoice()
               setSortCode={setSortCode}
               paypalEmail={paypalEmail}
               setPaypalEmail={setPaypalEmail}
+              extraInfo={extraInfo}
+              setExtraInfo={setExtraInfo}
             />
 
             <button className="previewButton" onClick={() => setShowInvoice(true)}>Preview Invoice</button>
