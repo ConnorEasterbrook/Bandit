@@ -3,7 +3,7 @@ import { nanoid } from 'nanoid';
 
 export default function TableInput({ tableData, setTableData })
 {
-    const [editTableId, setEditTableId] = useState(null);
+    const [editTableId] = useState(null);
 
     const handleAddFormChange = (event) =>
     {
@@ -96,6 +96,7 @@ export default function TableInput({ tableData, setTableData })
             </div>
 
             <button className="addTableItem" onClick={handleAddFormSubmit}>+</button>
+            <button className="addTableItem" onClick={handleDeleteClick}>-</button>
 
             <div className="showTable">
                 <table>
@@ -111,9 +112,6 @@ export default function TableInput({ tableData, setTableData })
                                 </td>
                                 <td className="smallTableCol">
                                     £{invoiceTable.price}
-                                </td>
-                                <td className="smallTableCol">
-                                    <button className="addTableItem" onClick={handleDeleteClick}>-</button>
                                 </td>
                             </tr>
                         ))}

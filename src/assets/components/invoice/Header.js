@@ -5,16 +5,6 @@ export default function Header()
         window.print();
     }
 
-    const downloadDocument = () =>
-    {
-        
-    }
-
-    const sendDocument = () =>
-    {
-
-    }
-
     return (
         <header>
             <div className="row">
