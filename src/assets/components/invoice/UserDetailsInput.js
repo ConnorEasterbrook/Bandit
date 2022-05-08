@@ -1,5 +1,3 @@
-import { useEffect } from "react";
-
 export default function UserDetailsInput({ name, setName, address, setAddress, invoiceDate, setInvoiceDate, invoiceNumber, setInvoiceNumber, invoiceReference, setInvoiceReference, dueDate, setDueDate, logo, setLogo, logoURL, setLogoURL })
 {
     return (
