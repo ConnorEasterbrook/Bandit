@@ -1,5 +1,21 @@
+import { useEffect, useState } from "react"
+
 export default function Table({ total, tableData })
 {
+    let [totall, setTotall] = useState(0)
+    // var sum = useState(0);
+    let totalCalculate = 0;
+    var totalCalculated = useState(false);
+
+    useEffect(() => 
+    {
+        let sum = tableData.reduce(function (prev, current)
+        {
+            return prev + +current.total
+        }, 0);
+        setTotall(sum)
+    });
+
     return (
         <table>
             <thead>
@@ -20,8 +36,8 @@ export default function Table({ total, tableData })
             </thead>
 
             <tbody>
-                {tableData.map ((invoiceTable) => 
-                    (
+                {tableData.map((invoiceTable) =>
+                (
                     <tr key={invoiceTable.id}>
                         <td>
                             {invoiceTable.quantity}
@@ -37,6 +53,16 @@ export default function Table({ total, tableData })
                         </td>
                     </tr>
                 ))}
+                <tr className="tableTotal">
+                    <td className="tableTotal" />
+                    <td className="tableTotal" />
+                    <td className="tableTotal">
+                        Invoice Total:
+                    </td>
+                    <td className="tableTotal">
+                        £{totall}
+                    </td>
+                </tr>
             </tbody>
         </table>
     )

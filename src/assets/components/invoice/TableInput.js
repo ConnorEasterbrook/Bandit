@@ -36,7 +36,7 @@ export default function TableInput({ tableData, setTableData })
             quantity: addTableData.quantityRow,
             desc: addTableData.descRow,
             price: addTableData.priceRow,
-            total: addTableData.quantityRow * addTableData.priceRow
+            total: addTableData.quantityRow * addTableData.priceRow,
         }
 
         const newRows = [...tableData, newRow];

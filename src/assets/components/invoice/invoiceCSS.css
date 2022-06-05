@@ -354,7 +354,14 @@ td
 
   .smallTableCol
   {
-    width: 10%;
+    width: 12%;
+  }
+
+  .tableTotal
+  {
+    /* float: right; */
+    margin: auto;
+    border: none;
   }
 
   .gap
