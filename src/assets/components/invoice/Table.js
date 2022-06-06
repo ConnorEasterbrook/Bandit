@@ -23,7 +23,7 @@ export default function Table({ total, tableData })
                     <td className="smallTableCol">
                         Quantity
                     </td>
-                    <td>
+                    <td className="largeTableCol">
                         Item Description
                     </td>
                     <td className="smallTableCol">

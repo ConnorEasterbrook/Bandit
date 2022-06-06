@@ -107,7 +107,7 @@ export default function TableInput({ tableData, setTableData })
                                 <td className="smallTableCol">
                                     {invoiceTable.quantity}
                                 </td>
-                                <td>
+                                <td className="largeTableCol">
                                     {invoiceTable.desc}
                                 </td>
                                 <td className="smallTableCol">

@@ -9,7 +9,7 @@ body
   
   max-width: 210mm;
   /* height: 297mm; */
-  background-color: #dadada;
+  background-color: #515151;
 }
 
 code 
@@ -216,6 +216,7 @@ td
     padding: 5% 10px;
     justify-content: center;
     text-align: center;
+    background-color: #dbdbdb;
   }
 
     .tableForm
@@ -251,6 +252,8 @@ td
           margin-left: auto;
           margin-right: auto;
           width: 80%;
+          background-color: #cacaca;
+          color: #000000;
         }
 
         #bigTextTable
@@ -261,6 +264,8 @@ td
           margin-right: auto;
           border-width: 0px;
           width: 90%;
+          background-color: #cacaca;
+          color: #000000;
         }
 
         .addTableItem
@@ -318,6 +323,8 @@ td
         margin-left: auto;
         margin-right: auto;
         width: 70%;
+        background-color: #cacaca;
+        color: #000000;
       }
 
       #bigText
@@ -328,6 +335,8 @@ td
         margin-right: auto;
         border-width: 0px;
         width: 85%;
+        background-color: #cacaca;
+        color: #000000;
       }
 
       #dateText
@@ -338,6 +347,8 @@ td
         margin-right: auto;
         border-width: 0px;
         width: 50%;
+        background-color: #cacaca;
+        color: #000000;
       }
 
   .mainBody
@@ -355,13 +366,31 @@ td
   .smallTableCol
   {
     width: 12%;
+    background-color: #ffc8c8;
+    border: solid;
+    border-width: 2px;
+    height: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .largeTableCol
+  {
+    background-color: #cbf6ff;
+    border: solid;
+    border-width: 2px;
+    height: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
   }
 
   .tableTotal
   {
     /* float: right; */
+    padding-top: 15px;
     margin: auto;
     border: none;
+    font-weight: bold;
   }
 
   .gap
