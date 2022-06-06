@@ -70,10 +70,6 @@ export default function UserDetailsInput({ name, setName, address, setAddress, i
 
             <div className="inputFieldSingle">
               <label htmlFor="invoiceReference">Company Logo:</label>
-              {/* <FileUploader
-                onFileSelectSuccess={(file) => setLogo(file)}
-                onFileSelectError={({ error }) => alert(error)}
-              /> */}
               <input
                 type="file"
                 id="dateText"
