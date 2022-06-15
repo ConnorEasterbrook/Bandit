@@ -363,10 +363,10 @@ td
     vertical-align: middle;
   }
 
-  .smallTableCol
+  .smallTableColInput
   {
     width: 12%;
-    background-color: #ffc8c8;
+    background-color: #ffffff;
     border: solid;
     border-width: 2px;
     height: 20px;
@@ -374,14 +374,27 @@ td
     text-transform: uppercase;
   }
 
-  .largeTableCol
+  .largeTableColInput
   {
-    background-color: #cbf6ff;
+    background-color: #ffffff;
     border: solid;
     border-width: 2px;
     height: 20px;
     font-weight: bold;
     text-transform: uppercase;
+  }
+
+  .smallTableCol
+  {
+    border: solid;
+    border-width: 1px;
+    width: 12%;
+  }
+
+  .largeTableCol
+  {
+    border: solid;
+    border-width: 1px;
   }
 
   .tableTotal

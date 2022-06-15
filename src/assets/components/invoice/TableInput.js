@@ -104,13 +104,13 @@ export default function TableInput({ tableData, setTableData })
                         {tableData.map((invoiceTable) =>
                         (
                             <tr key={invoiceTable.id}>
-                                <td className="smallTableCol">
+                                <td className="smallTableColInput">
                                     {invoiceTable.quantity}
                                 </td>
-                                <td className="largeTableCol">
+                                <td className="largeTableColInput">
                                     {invoiceTable.desc}
                                 </td>
-                                <td className="smallTableCol">
+                                <td className="smallTableColInput">
                                     £{invoiceTable.price}
                                 </td>
                             </tr>
