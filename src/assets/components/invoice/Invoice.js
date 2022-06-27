@@ -38,7 +38,7 @@ function Invoice()
   const [accountNumber, setAccountNumber] = useState("");
   const [sortCode, setSortCode] = useState("");
   const [paypalEmail, setPaypalEmail] = useState("");
-  const [extraInfo, setExtraInfo] = useState("Settlement of this invoice is required within 15 days from the invoice date. We reserve the right to charge interest on invoices that remain unpaid 30 days after the invoice date. Our standard interest rate is 10.75% (10% plus the Bank of England base rate). The Late Payment of Commercial Debts (Interest) Act 1998 applies to this invoice. Any queries regarding this invoice should be raised within 7 days of the invoice date. ");
+  const [extraInfo, setExtraInfo] = useState("Settlement of this invoice is required within a month from the invoice date. We reserve the right to charge interest on invoices that remain unpaid a month after the invoice date. Our standard interest rate is 10.75% (10% plus the Bank of England base rate). The Late Payment of Commercial Debts (Interest) Act 1998 applies to this invoice. Any queries regarding this invoice should be raised within 7 days of the invoice date. ");
 
   const [showInvoice, setShowInvoice] = useState(false);
 
